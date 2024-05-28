@@ -1,0 +1,108 @@
+ @import url('https://fonts.googleapis.com/css?family=Great Vibes')
+
+ 
+ :root{
+    --radius: 15px;
+    --app-width: 600px;
+ }
+ 
+
+ * {
+    box-sizing: border-box;
+ }
+
+body{
+    font-family: "Poppins", sans-serif;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    min-height: 100vh;
+    background: url('/images/bg5.png') center;
+    background-size: cover;
+}
+
+.app {
+    color: #ffffffb0;
+    background-color: #ffffff21;
+    width: var(--app-width);
+    border-radius: var(--radius);
+    padding: 2rem;
+    box-shadow: 0 15px 40px -20px black;
+
+}
+
+.app h1 {
+    margin-top:0;
+    margin-bottom: 40px;
+    font-size: 28px;
+}
+
+.todo-input {
+    width: 100%;
+    margin-bottom:2rem;
+    border: none;
+    border-radius: var(--radius);
+    padding: 1rem 1.5rem;
+    font-size: 20px;
+    background-color: #f4f4f425;
+    color: black;
+}
+
+.todo-input::placeholder {
+    color: #00000070;
+}
+
+.todos,
+.completed-todos,
+.uncompleted-todos {
+    display: flex;
+    flex-direction: column;
+    gap: .8rem;
+}
+
+.todo-item{
+    background-color: #f4f4f4bd;
+    padding: 1rem 1.5rem;
+    border-radius: var(--radius);
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    color: black;
+}
+
+.todo-item span{
+    display: flex;
+    align-items: center;
+    gap: .8rem;
+}
+
+.todo-item input[type=checkbox] {
+    width: 20px;
+    height: 20px;
+    accent-color: lime;
+}
+
+.todo-item a{
+    width: 25px;
+    height: 25px;
+    color: #555555;
+}
+
+.todo-item a img {
+    pointer-events: none;
+    display: block;
+    margin-left: auto;
+    margin-right: auto;
+    width: 100%;
+}
+
+.completed-todos .todo-item{
+    background-color: #74c674;
+    text-decoration: line-through;
+}
+
+.completed-title {
+    font-size: 20px;
+    margin-top: 30px;
+    margin-bottom: 10px;
+}
